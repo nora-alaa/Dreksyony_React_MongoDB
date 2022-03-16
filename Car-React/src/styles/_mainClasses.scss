@@ -1,0 +1,129 @@
+// html {
+//   background-image: url("../"+ $body-pattern);
+// }
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+a:hover {
+  text-decoration: inherit;
+  color: inherit;
+}
+a:active {
+  text-decoration: inherit;
+  color: inherit;
+}
+* {
+  box-sizing: border-box;
+  outline: none !important;
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: #334d50;
+  border-radius: 25px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: linear-gradient(-45deg, #334d50, #cbcaa5);
+	background-color: #cbcaa5;
+  border-radius: 25px;
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background-color: linear-gradient(-45deg, #334d50, #cbcaa5);
+	background-image: -webkit-linear-gradient(-45deg,#334d50, #cbcaa5 50%, #334d50);
+  border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #334d50;
+}
+//to make edges seem jagged
+.jagged-edges {
+  &:before {
+    display: block;
+    content: "";
+    background-image: url("../" + $white-pattern-style-top);
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 15px;
+  }
+
+  &:after {
+    display: block;
+    content: "";
+    background-image: url("../" + $white-pattern-style-top);
+    width: 100%;
+    left: 0;
+    transform: rotate(180deg);
+    bottom: -1px;
+    position: absolute;
+    height: 15px;
+  }
+
+  .right-style {
+    position: absolute;
+    background-image: url("../" + $white-pattern-style-side);
+    width: 15px;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+
+  .left-style {
+    position: absolute;
+    background-image: url("../" + $white-pattern-style-side);
+    width: 15px;
+    top: 0;
+    transform: rotate(180deg);
+    right: -1px;
+    height: 100%;
+  }
+}
+
+//jagged only for top side
+.jagged-edges-top {
+  &:before {
+    display: block;
+    content: "";
+    background-image: url("../" + $white-pattern-style-top);
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 15px;
+  }
+}
+
+.truncate {
+  word-break: break-all;
+}
+
+.checked1 {
+  color: orange;
+}
+
+.backgroundImage{
+  background: url("../assets/Images/rp-bentley-continental-gt-v8-20-2-1570633139.jpg") center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
